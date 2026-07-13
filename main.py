@@ -55,13 +55,25 @@ TRACK C: YOUR OWN IDEA
 =============================== PLAN FIRST ====================================
 Before you write code, fill this in (it will keep you honest all week):
 
-  MY PROJECT: (one sentence)
-  THE PIECES I NEED TO BUILD: (list 3-6 functions or parts)
-  WHAT I WILL DEMO AT SHOWCASE: (the 60-second version)
+  MY PROJECT: Visual platform adventure game which consists of both parkour and battle.
+  THE PIECES I NEED TO BUILD: Code so sprites are able to interact with the platforms, the animations for the sprites and effects, and some type of programmed physics in the game.
+  WHAT I WILL DEMO AT SHOWCASE: The different interactive sprites, and hopefully an attack animation where the player can defend against enemies if I get that far.
 
 ==============================================================================
 Build your project below (and split it into more .py files if it gets big;
 the grader reads all of them). Delete this line and start!
 '''
 
-print("My final project is not built yet!")
+import pygame
+
+pygame.init()
+screen = pygame.display.set_mode((640,640))
+clock = pygame.time.Clock()
+running = True
+
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+pygame.QUIT()
