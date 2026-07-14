@@ -55,25 +55,52 @@ TRACK C: YOUR OWN IDEA
 =============================== PLAN FIRST ====================================
 Before you write code, fill this in (it will keep you honest all week):
 
-  MY PROJECT: Visual platform adventure game which consists of both parkour and battle.
-  THE PIECES I NEED TO BUILD: Code so sprites are able to interact with the platforms, the animations for the sprites and effects, and some type of programmed physics in the game.
-  WHAT I WILL DEMO AT SHOWCASE: The different interactive sprites, and hopefully an attack animation where the player can defend against enemies if I get that far.
+  MY PROJECT: 
+    Visual platform adventure game which consists of both parkour and battle.
+  THE PIECES I NEED TO BUILD: 
+    1. Sprites interactability with the platforms
+    2. Animations for sprites and effects
+    3. Type of programmed physics in the game.
+  WHAT I WILL DEMO AT SHOWCASE: 
+    Character moving around and interacting with the environment.
 
 ==============================================================================
 Build your project below (and split it into more .py files if it gets big;
 the grader reads all of them). Delete this line and start!
 '''
 
+import os
+import random
+import math
 import pygame
-
+from os import listdir
+from os.path import isfile, join
 pygame.init()
-screen = pygame.display.set_mode((640,640))
-clock = pygame.time.Clock()
-running = True
 
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+pygame.display.set_caption("Platformer")
+BG_COLOR = (255,255,255)
+WIDTH, HEIGHT = 1000, 800
+FPS = 60
+PLAYER_VEL = 5
 
-pygame.QUIT()
+window = pygame.display.set_mode(WIDTH, HEIGHT)
+
+def get_background():
+    image = pygame.image.load(join())
+
+def main(window):
+    clock = pygame.time.Clock()
+
+    run = True
+    while run:
+        clock.tick(FPS)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+                break
+    pygame.quit()
+    quit()
+
+if __name__ == "__main__":
+    main(window)
