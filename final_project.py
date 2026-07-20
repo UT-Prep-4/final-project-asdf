@@ -343,12 +343,19 @@ def main(window):
     block_size = 96
 
     player = Player(100, 100, 50, 50)
-    fire = Fire(100, HEIGHT - block_size - 64, 16, 32)
+    fire = Fire(block_size*13+32, HEIGHT-block_size*3-64, 16, 32)
     fire.on()
     floor = [Block(i * block_size, HEIGHT - block_size, block_size)
              for i in range(-WIDTH // block_size, (WIDTH * 2) // block_size)]
-    objects = [*floor, Block(0, HEIGHT - block_size * 2, block_size), 
-               Block(block_size * 3, HEIGHT - block_size * 4, block_size), fire]
+    special_block = Block(block_size*20, HEIGHT-block_size*5, block_size)
+    objects = [*floor, Block(100, HEIGHT - block_size * 2, block_size), 
+               Block(block_size * 3, HEIGHT - block_size * 4, block_size), fire, 
+               Block(block_size * 5, HEIGHT - block_size * 5, block_size), 
+               Block(block_size*10, HEIGHT-block_size*4, block_size), 
+               Block(block_size*11, HEIGHT-block_size*5, block_size), 
+               Block(block_size*13, HEIGHT-block_size*3, block_size),
+               Block(block_size*15, HEIGHT-block_size*5, block_size),
+               Block(block_size*19, HEIGHT-block_size*6, block_size),special_block]
 
     offset_x = 0
     scroll_area_width = 200
@@ -368,7 +375,7 @@ def main(window):
                 if event.key == pygame.K_UP and player.jump_count < 2:
                     player.jump()
                 if event.key == pygame.K_w and player.jump_count < 2:
-                    player.jump()
+                    player.jump()            
 
         player.loop(FPS)
         fire.loop()
