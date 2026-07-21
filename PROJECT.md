@@ -1,18 +1,13 @@
-# Project Title (REPLACE THIS with your project's name)
+# Platformer Game
 
 ## What it is
-REPLACE THIS: 2-4 sentences a stranger could understand. What does your program
-do? What makes it cool? This is the paragraph you would put on a resume or in a
-college application, so write it like you're proud of it.
+This is a game which demonstrates different types of collisions, objects, and sprites interacting with each other. It utilizes animations to make it more immersive. In this game, you can move around and interact with surrounding objects, with applied gravity for a better quality simulation.
 
 ## How to run it
-REPLACE THIS: exact steps. For example: "Run python final_project.py in the
-terminal, then open port 6080 to see the game window. Use the arrow keys to move."
+Run python final_project.py in the terminal or click the play button, make sure you have the game port 6080 open. You can use either WASD or arrow keys to move around, and the space bar also works for jump.
 
 ## How it works
-REPLACE THIS: 2-4 sentences on the interesting part of the code. Which function
-does the magic? What was the hardest bug you fixed?
+Most of how this works is thanks to the collision, loop, and main functions. The hardest thing to debug was some of the syntax errors when it came to naming functions and variables, and sometimes I would mess up the if-statements by putting them in incorrect tabs/spacings.
 
 ## Built by
-REPLACE THIS: your name(s), and anything you used for help or inspiration
-(tutorials, art sources, your instructor, teammates).
+Anika Siraswar, Tutorial & Character + Fire art by freeCodeCamp.org on Youtube.
